@@ -88,7 +88,7 @@ model Product {
   slug        String   @unique
   description String   @db.Text
   price       Decimal  @db.Decimal(10, 2)
-  images      String   @db.Json // Array de URLs de imagens
+  images      Json     // Array de URLs de imagens
   categoryId  String   @map("category_id")
   stock       Int      @default(0)
   active      Boolean  @default(true)

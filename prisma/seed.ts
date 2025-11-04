@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client'
-import bcrypt from 'bcryptjs'
+import * as bcrypt from 'bcryptjs'
 
 const prisma = new PrismaClient()
 
@@ -80,10 +80,10 @@ async function main() {
       description:
         'Descubra os sabores autênticos do litoral paranaense com este box especial. Inclui receitas tradicionais, temperos locais e ingredientes selecionados das comunidades Caiçaras.',
       price: 149.9,
-      images: JSON.stringify([
+      images: [
         'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800',
         'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800',
-      ]),
+      ],
       categoryId: categoriaGastronomia.id,
       stock: 50,
       active: true,
@@ -133,9 +133,9 @@ async function main() {
       description:
         'Conheça a arte Caiçara através deste box especial. Inclui produtos artesanais únicos e informações sobre o Fandango, dança tradicional do litoral paranaense.',
       price: 199.9,
-      images: JSON.stringify([
+      images: [
         'https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=800',
-      ]),
+      ],
       categoryId: categoriaArtesanato.id,
       stock: 30,
       active: true,
