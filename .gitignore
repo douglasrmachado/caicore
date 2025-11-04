@@ -36,6 +36,5 @@ next-env.d.ts
 # Prisma
 /prisma/migrations
 
-#readme
-PLANO_DE_IMPLEMENTACAO.md
-FASE_1_SETUP.md
+# Documentation files (.md)
+*.md
